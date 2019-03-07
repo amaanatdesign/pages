@@ -1,0 +1,610 @@
+<!--
+ 
+                         PAGE TWO - CAROL  
+                (yes i named it after carol danvers)
+                  A SIMPLE TAGS PAGE THAT SHOWS 
+                  TAGS WHEN HOVERING ON CIRCLES
+ 
+               MADE FOR YOU WITH ♡ BY AMAANAT THEMES
+               
+                      (@amaanat on tumblr)
+               
+                       
+please visit https://www.amaanat.tumblr.com/terms to read the terms and conditions before using my page. If you do not agree to the terms of use, you may not use my work.
+ 
+If you have questions about this code or find things difficult, do not hesitate to contact me!
+ 
+please do not steal my code, remove or move the credit or claim this as your own.
+ 
+credits:
+- honeybee icon font by suiomi
+- custom tumblr controls by cyantists
+- google fonts
+ 
+a full list of credits used in this theme and others can be found on https://www.amaanat.tumblr.com/credits
+ 
+much thanks to codingcabin for helping me out in difficult times and a very special thank you to faiz, aka @fukuo, for helping me throughout the difficulties i encountered
+ 
+-->
+
+
+
+<!DOCTYPE html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+
+<!-- JQUERY SCRIPT DO NOT TOUCH THIS--> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <!-- HONEYBEE ICON FONT BY SUIOMI | DO NOT TOUCH OR REMOVE THIS AT ALL-->
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<!-- css hover effect https://github.com/IanLunn/Hover -->
+<link href="css/hover.css" rel="stylesheet" media="all">
+
+<!-- color inspo from  https://paletteworld.tumblr.com/post/183210837395/100-db7cb7-c8b1db-dfe7f1-b0c0da-668dbd -->
+
+</head>
+
+
+
+<style type="text/css">
+
+body {
+    font-family: 'ABeeZee', sans-serif;
+    background-color:white; /* change your background color here */
+    margin:0;
+}
+
+/* body scrollbar */
+
+::-webkit-scrollbar {
+    width: 6px;
+    z-index:2;
+    height:6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#668dbd; /* change the thumb color of your scrollbar here */
+  transition:.5s ease;
+  width:3px;
+}
+::-webkit-scrollbar-corner {
+    background-color:transparent;
+}
+
+iframe.tmblr-iframe {
+    z-index:99999999999999!important;
+    top:0!important;
+    right:0!important;
+    opacity:0.4;
+    /* delete invert(1) from here */
+        filter:invert(1) contrast(150%);
+        -webkit-filter:invert(1) contrast(150%);
+        -o-filter:invert(1) contrast(150%);
+        -moz-filter:invert(1) contrast(150%);
+        -ms-filter:invert(1) contrast(150%);
+    /* to here if your blog has a dark background */
+    transform:scale(0.65);
+    transform-origin:100% 0;
+    -webkit-transform:scale(0.65);
+    -webkit-transform-origin:100% 0;
+    -o-transform:scale(0.65);
+    -o-transform-origin:100% 0;
+    -moz-transform:scale(0.65);
+    -moz-transform-origin:100% 0;
+    -ms-transform:scale(0.65);
+    -ms-transform-origin:100% 0;}
+
+iframe.tmblr-iframe:hover {
+    opacity:0.6!important;}
+
+/* header */
+
+.header {
+    margin:0 auto;
+    width:570px;
+    margin-top:75px;
+    text-align:center;
+}
+
+.header img {
+    width:35px;
+    height:35spx;
+    vertical-align:middle;
+    display:inline-block;
+}
+
+.title {
+    background-color:#eee;
+    display:inline-block;
+    padding:10px;
+    font-size:13px;
+    max-width:500px;
+}
+
+.links {
+    margin-top:10px;
+    padding:10px;
+}
+
+.links a {
+    padding-left:10px;
+    padding-right:10px;
+    text-decoration:none;
+    color:black; /* change your links color here */
+    text-transform:uppercase;
+}
+
+/* links hover effect dont touch */
+/* Wobble Horizontal */
+@-webkit-keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.hvr-wobble-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
+  -webkit-animation-name: hvr-wobble-horizontal;
+  animation-name: hvr-wobble-horizontal;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* main content */
+
+.main-content {
+    margin:0 auto;
+    width:800px;
+    margin-top:75px;
+    text-align:center;
+     display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:100px;
+}
+
+/* the circles */
+.circle {
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    background-color: #c8b1db; /* change your circle background color here */
+    transition:all .5s linear;
+    margin-right:10px;
+    margin-bottom:50px;
+    position:relative;
+
+}
+
+.circle:hover {
+    height:250px;
+    width:250px;
+    border-radius:0px;
+}
+
+/* the titles of the circles */
+.titles {
+    width:100%;
+    height:auto;
+    text-indent:-10px;
+    position:absolute;
+    margin-top:75px;
+    font-weight:bold;
+    color:white; /* change your title color here */
+    font-size:20px;
+    padding:5px;
+    transition:.7s;
+    line-height:20px;
+   
+}
+
+.circle:hover .titles {
+    margin-top:-35px;
+    color:black;
+}
+
+.circle:hover .tags {
+    opacity:1;
+}
+
+
+/* customisation of tags */ 
+
+.tags {
+    width:100%;
+    font-size:13px;
+    margin-top:10px;
+    opacity:0;
+    transition:.8s ease;
+    overflow:auto;
+    max-height:240px;
+    z-index:-1;
+
+}
+
+/* scrollbar of tags */
+
+.tags::-webkit-scrollbar {
+    width: 6px;
+    z-index:2;
+}
+
+/* Track */
+.tags::-webkit-scrollbar-track {
+  background:transparent; 
+}
+
+/* Handle */
+.tags::-webkit-scrollbar-thumb {
+  background:white; /* change the thumb color of your scrollbar here */
+  transition:.5s ease;
+  width:3px;
+}
+.tags::-webkit-scrollbar-corner {
+    background-color:transparent;
+}
+
+.tags a {
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+    z-index:2;
+    color:white; /* change your tags color here */
+    transition:.5s ease;
+    width:auto;
+}
+
+.tags a:hover {
+    color:#668dbd; /* change your tags hover color here */
+}
+
+ul, li {
+    list-style-type:none;
+    text-align:center;
+}
+
+ul {
+    margin:0 auto;
+    padding:0;
+}
+
+
+
+
+/* you touch this and you feel my wrath */
+.credit {
+    background-color:white;
+    line-height:16px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+  position: fixed;
+  right:10px;
+  bottom: 10px;
+  display: block;
+  overflow: hidden;
+  color: #000;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing:normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.credit:after {
+  display: inline-block;
+  width: 0; 
+  content: 'amaanat';
+  letter-spacing:normal;
+  transition: width .9s ease;
+}
+.credit:hover:after {
+  width: 4em; 
+  padding-right:5px;
+}
+
+
+.th-diamond-o {
+    font-size:16px;
+    
+}
+
+.credit:hover {
+    color:black;
+}
+
+
+
+</style>
+
+<body>
+
+<div class="header">
+    <a href="/"><img src="{portraitURL-64}"></a>
+    <div class="title">{title}</div>
+    
+    <div class="links">
+        <a class="hvr-wobble-horizontal" href="/">home</a>
+        <a class="hvr-wobble-horizontal" href="/ask">ask</a>
+        <a class="hvr-wobble-horizontal" href="/">link</a> <!-- custom link one -->
+        <a class="hvr-wobble-horizontal" href="/">link</a> <!-- custom link two -->
+        <a class="hvr-wobble-horizontal" href="/">link</a> <!-- custom link three -->
+    </div>
+</div>
+
+<!-- main content. Follow the instructions on how to change the links carefully -->
+
+<div class="main-content">
+
+<!-- ok so i have already included 9 circles for you. Now, to edit the do the following:
+
+- CHANGING TITLE OF YOUR CIRCLE
+look at where it says :
+<div class="titles">title</div>
+
+and change the word 'title' to whatever you want
+
+CHANGING / ADDING TAGS
+you can add as many tags as you want btw the circle will add a scrollbar automatically if there are many tags!
+
+to add another tags category, copy and paste this where you want:
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+WHEN ADDING NEW TAGS DO NOT FORGET THE <li></li> OTHERWISE THEME WILL LOOK WEIRD
+-->
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+<div class="circle">
+    <div class="titles">title</div>
+    <div class="tags">
+    <ul>
+    <li><a href="/">tag</a></li>     
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    <li><a href="/">tag</a></li> 
+    </ul>
+    </div> 
+</div>
+
+
+</div>
+
+
+<a title="made by amaanat themes" href="https://www.amaanat.tumblr.com" class="credit"><span class="th th-diamond-o"></span>
+</a>
+    
+</body>
+
+</html>
